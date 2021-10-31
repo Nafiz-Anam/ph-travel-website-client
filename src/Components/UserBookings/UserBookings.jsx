@@ -7,14 +7,14 @@ const UserBookings = (props) => {
     // const [allBookings, setAllBookings] = useState([]);
     //delete single booking
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
             .then((data) => {
                 if (data.deletedCount > 0) {
                     alert("Canceled Successfully.");
-                    
+
                     // const remainingBookings = allBookings.filter(
                     //     (booking) => booking._id !== id
                     // );

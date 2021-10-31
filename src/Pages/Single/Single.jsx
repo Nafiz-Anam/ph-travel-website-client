@@ -10,7 +10,7 @@ const Single = () => {
     const { setSaveDetails } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/hotels/${id}`)
+        fetch(`https://gruesome-beast-12739.herokuapp.com/hotels/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

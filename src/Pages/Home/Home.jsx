@@ -6,7 +6,7 @@ const Home = () => {
     // fetching data  here
     const [allHotels, setAllHotels] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/hotels")
+        fetch("https://gruesome-beast-12739.herokuapp.com/hotels")
             .then((res) => res.json())
             .then((data) => setAllHotels(data));
     }, []);

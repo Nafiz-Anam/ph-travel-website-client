@@ -7,7 +7,7 @@ const Admin = () => {
     const [allBookings, setAllBookings] = useState([]);
     const onSubmit = (data) => {
         console.log(data);
-        fetch("http://localhost:5000/hotels", {
+        fetch("https://gruesome-beast-12739.herokuapp.com/hotels", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -27,7 +27,7 @@ const Admin = () => {
     // fetching data  here
     // const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/booking")
+        fetch("https://gruesome-beast-12739.herokuapp.com/booking")
             .then((res) => res.json())
             .then((data) => {
                 setAllBookings(data);
@@ -36,7 +36,7 @@ const Admin = () => {
     }, []);
     //delete single booking
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -54,7 +54,7 @@ const Admin = () => {
     const [hotel, setHotel] = useState({});
     // update status
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/hotels/${id}`)
+        fetch(`https://gruesome-beast-12739.herokuapp.com/hotels/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -63,7 +63,7 @@ const Admin = () => {
         const updatedStatus = { ...hotel };
         updatedStatus.status = "Approve";
         setHotel(updatedStatus);
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -74,7 +74,7 @@ const Admin = () => {
             .then((data) => {
                 if (data.modifiedCount > 0) {
                     alert("Approved Successfully.");
-                    fetch("http://localhost:5000/booking")
+                    fetch("https://gruesome-beast-12739.herokuapp.com/booking")
                         .then((res) => res.json())
                         .then((data) => {
                             setAllBookings(data);

@@ -8,7 +8,7 @@ const Profile = () => {
     // fetching specific data  here
     const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/booking")
+        fetch("https://gruesome-beast-12739.herokuapp.com/booking")
             .then((res) => res.json())
             .then((data) => {
                 const specificBooking = data.filter(
@@ -19,7 +19,7 @@ const Profile = () => {
             });
     }, []);
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -72,7 +72,6 @@ const Profile = () => {
                                                 Status : {booking?.status}
                                             </p>
                                             <div className="buttons mt-3">
-                                                
                                                 <button
                                                     onClick={() => {
                                                         handleDelete(
