@@ -1,0 +1,92 @@
+.about-page {
+    padding: 80px 0;
+}
+.about {
+    align-items: center;
+}
+.about-img img {
+    width: 100%;
+}
+.about-page p {
+    font-size: 17px;
+    color: gray;
+    font-weight: 500;
+    padding-top: 20px;
+}
+.team{
+    padding: 80px 0;
+}
+.team .title{
+    width: 450px;
+    padding: 30px 0;
+}
+.team-card {
+    border: none;
+}
+.team-card img {
+    border-radius: 15px;
+}
+.team-card h3{
+    padding-top: 15px;
+}
+.team-card p{
+    padding-top: 10px;
+}
+.testimonial{
+    padding: 80px;
+    background-image: url('https://i.ibb.co/1mTjwzd/Screenshot-2.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    border-radius: 50px;
+}
+.testimonial-slider{
+    /* background-color: #F3F4F6; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel{
+    width: 550px;
+    margin-top: 200px;
+}
+.carousel button span i{
+    font-size: 30px;
+    color: black;
+}
+.content .feedback{
+    font-size: 23px;
+    font-weight: 300;
+    color: black;
+    padding: 10px;
+
+}
+.content h5{
+    padding: 10px;
+}
+.content h5 i{
+    padding: 10px;
+}
+.carousel-control-prev, .carousel-control-next{
+    width: 0%!important;
+}
+
+@media (max-width: 575.98px) {
+    .testimonial{
+        display: none;
+    }
+    .team .title{
+        width: 100%;
+    }
+    .about-page{
+        padding: 15px 0;
+    }
+    .team-card{
+        margin: 25px;
+    }
+    .team{
+        padding: 15px 0;
+    }
+}

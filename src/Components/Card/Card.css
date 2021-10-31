@@ -1,0 +1,52 @@
+.all-card .title{
+    font-weight: 500;
+    font-size: 20px;
+}
+.all-card img{
+    height: 220px;
+}
+.all-card .address, .card .bed-count{
+    font-size: 15px;
+    color: gray;
+    font-weight: 400;
+}
+.card-footer {
+    background-color: white;
+}
+.card-footer span{
+    font-weight: 300;
+    color: gray;
+    font-size: 16px;
+}
+.card-footer .price{
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-card{
+    align-items: center;
+}
+.card-footer .ratings{
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+}
+.card-footer .fas{
+    color: red;
+}
+.rating-area{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-details{
+    background-color: #4338CA;
+    color: white;
+}
+.btn-wish{
+    background-color: red;
+    color: white;
+}

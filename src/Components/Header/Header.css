@@ -1,0 +1,47 @@
+.navigation {
+    padding: 20px 0;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+    font-weight: 500;
+    font-size: 17px;
+}
+nav ul li {
+    margin-left: 10px;
+}
+.navbar-nav{
+    align-items: center;
+}
+.logo {
+    width: 30%;
+}
+
+.login-btn {
+    background-color: #4338ca;
+    color: white !important;
+    padding: 10px 30px!important;
+    border-radius: 50px;
+}
+.login-btn a {
+    color: white !important;
+}
+.register-btn {
+    background-color: #134e4a;
+    color: white !important;
+    padding: 10px 30px!important;
+    border-radius: 50px;
+}
+.register-btn a {
+    color: white !important;
+}
+.user-name a{
+    color: #4338ca;
+    font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+    .navbar-toggler-icon{
+        color: #4338ca!important;
+    }
+}

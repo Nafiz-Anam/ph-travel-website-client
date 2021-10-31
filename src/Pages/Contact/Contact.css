@@ -1,0 +1,91 @@
+.contact-page {
+    padding: 80px 0;
+}
+.contact-page .title {
+    padding-bottom: 80px;
+}
+.contact-page .social-links ul {
+    list-style-type: none;
+    display: flex;
+}
+.contact-page .social-links ul li{
+    margin-right: 20px;
+}
+.contact-page .social-links ul li i{
+    font-size: 20px;
+    cursor: pointer;
+}
+.contact-page .social-links ul li i:hover{
+    color: #4338ca;
+}
+.contact-info h5 {
+    padding: 20px 0 15px 0;
+    font-weight: 800;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form label {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.contact-form form input {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+.contact-form form textarea {
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.btn-contact {
+    margin: 15px 0;
+    width: 30%;
+    background-color: #4338ca;
+    color: white;
+}
+.contact-img img{
+    width: 100%;
+}
+.newsletter-section{
+    align-items: center;
+    padding: 80px 0;
+}
+
+.newsletter p{
+    color: gray;
+    font-size: 17px;
+    padding: 15px 0;
+}
+.newsletter ol li{
+    padding: 5px 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+.newsletter ol li::marker{
+    font-weight: 800;
+    color: #4338ca;
+}
+
+.subscribe input{
+    height: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    width: 350px;
+}
+
+.btn-subs, .btn-subs:hover{
+    background-color: #4338ca;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin-left: -50px;
+}

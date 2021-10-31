@@ -1,0 +1,31 @@
+.main-card {
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+.card-img {
+    width: 30%;
+}
+.card-img img {
+    width: 100%;
+}
+
+.card-details {
+    width: 70%;
+    padding-left: 30px;
+}
+.card-details h1{
+    font-size: 26px;
+    font-weight: 600;
+}
+.card-details p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.cancel-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100px;
+}

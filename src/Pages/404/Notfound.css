@@ -1,0 +1,28 @@
+.content-404 {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-404 h1 {
+    font-size: 20em;
+    font-weight: 900;
+}
+
+.content-404 h3 {
+    font-size: 3em;
+}
+
+.content-404 p {
+    font-size: 18px;
+}
+
+.notfound-input {
+    width: 400px;
+}
+.notfound-btn {
+    background-color: #4338ca;
+    color: white;
+    font-weight: 500;
+}

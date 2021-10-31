@@ -1,0 +1,89 @@
+.details-container {
+    padding: 80px 0;
+}
+
+.details-area{
+    padding: 0 40px;
+}
+
+.hotel-info {
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+.hotel-info img {
+    width: 100%;
+    border-radius: 10px;
+}
+.hotel-info h1 {
+    font-weight: 600;
+}
+.hotel-info h3 {
+    font-weight: 600;
+}
+.hotel-info p {
+    color: gray;
+    font-size: 20px;
+}
+
+.desc {
+    padding: 40px 0;
+}
+.desc h1{
+    padding: 25px 0;
+}
+.desc p {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+
+/* booking part area  */
+
+.price-data {
+    justify-content: space-between;
+}
+
+.btn-booking {
+    width: 100%;
+    background-color: #4338CA;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+.booking-form{
+    padding: 40px;
+}
+
+.booking-form label {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.booking-form h1 {
+    font-size: 35px;
+    color: #4338CA;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.booking-form h2 {
+    font-size: 25px;
+    color: #4338CA;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .hotel-info img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    
+}

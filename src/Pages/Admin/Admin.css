@@ -1,0 +1,121 @@
+.admin-page {
+    padding: 80px 0;
+}
+
+.menu-side {
+    width: 15%;
+    align-items: flex-start;
+}
+.menu-side .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+    color: blue;
+}
+.menu-side .nav-link.active {
+    color: blue!important;
+}
+
+.menu-side .nav-link {
+    color: #555;
+}
+.content-side {
+    width: 85%;
+}
+
+.content-side table {
+    width: 100%;
+}
+
+.content-side table thead {
+    background-color: #f5f6fa;
+    height: 60px;
+    vertical-align: middle;
+}
+.content-side table thead td {
+    padding: 15px;
+}
+.content-side table tbody td {
+    padding: 15px;
+}
+.admin-panel {
+    justify-content: space-evenly;
+}
+.right-side,
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event form input {
+    height: 50px;
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #7a7a7a75;
+    margin: 10px 0 10px 0;
+}
+
+.event form textarea {
+    height: 100px;
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #7a7a7a75;
+    margin: 10px 0 10px 0;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn .btn-event{
+    width: 200px;
+    background-color: #3F90FC;
+    color: white;
+    font-size: 17px;
+    border-radius: 50px;
+    border: none;
+}
+
+.add-event h1, .booking-list h1{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+.mobile-booking{
+    display: none;
+}
+@media (max-width: 575.98px) { 
+    .admin-panel{
+        flex-direction: column;
+    }
+.admin-page{
+    padding: 20px 0;
+}
+    .menu-side{
+        width: 100%;
+    }
+    .add-event{
+        padding-top: 30px;
+    }
+    .content-side{
+        width: 100%;
+    }
+    .add-form{
+        flex-direction: column;
+    }
+    .event form input, .event form textarea{
+        width: 100%;
+    }
+    .booking-table{
+        display: none;
+    }
+    .mobile-booking{
+    display: block;
+}
+}
