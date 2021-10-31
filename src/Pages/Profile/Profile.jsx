@@ -18,20 +18,24 @@ const Profile = () => {
                 // console.log(data);
             });
     }, []);
+    // deleting a booking
     const handleDelete = (id) => {
-        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
-            method: "DELETE",
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.deletedCount > 0) {
-                    alert("Canceled Successfully.");
-                    const remainingBookings = allBookings.filter(
-                        (booking) => booking._id !== id
-                    );
-                    setAllBookings(remainingBookings);
-                }
-            });
+        const proceed = window.confirm("Are you sure, you want to cancel?");
+        if (proceed) {
+            fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.deletedCount > 0) {
+                        alert("Canceled Successfully.");
+                        const remainingBookings = allBookings.filter(
+                            (booking) => booking._id !== id
+                        );
+                        setAllBookings(remainingBookings);
+                    }
+                });
+        }
     };
     return (
         <div className="profile-page">
@@ -51,24 +55,27 @@ const Profile = () => {
                         <div className="row">
                             <div className="col-sm-12">
                                 {allBookings.map((booking) => (
-                                    <div class="card m-4">
+                                    <div
+                                        key={booking?._id}
+                                        className="card m-4"
+                                    >
                                         <img
                                             src={booking?.image}
-                                            class="card-img-top"
+                                            className="card-img-top"
                                             alt="..."
                                         />
                                         <div className="card-body">
-                                            <h5 class="card-title">
+                                            <h5 className="card-title">
                                                 {booking?.hotelname}
                                             </h5>
-                                            <p class="card-text">
+                                            <p className="card-text">
                                                 Booked By :{" "}
                                                 <b>{booking?.name}</b>
                                             </p>
-                                            <p class="card-text">
+                                            <p className="card-text">
                                                 Email : <b>{booking?.email}</b>
                                             </p>
-                                            <p class="card-text">
+                                            <p className="card-text">
                                                 Status : {booking?.status}
                                             </p>
                                             <div className="buttons mt-3">
@@ -92,16 +99,18 @@ const Profile = () => {
                     {/* mobile bookings  */}
                     <table className="booking-table">
                         <thead className="table-list ">
-                            <td>Name</td>
-                            <td>Email ID</td>
-                            <td>Registration Date</td>
-                            <td>Booked Item</td>
-                            <td>Action</td>
-                            <td>Status</td>
+                            <tr>
+                                <td>Name</td>
+                                <td>Email ID</td>
+                                <td>Registration Date</td>
+                                <td>Booked Item</td>
+                                <td>Action</td>
+                                <td>Status</td>
+                            </tr>
                         </thead>
                         <tbody>
                             {allBookings.map((booking) => (
-                                <tr>
+                                <tr key={booking?._id}>
                                     <td>{booking?.name}</td>
                                     <td>{booking?.email}</td>
                                     <td>20/07/2021</td>

@@ -1,14 +1,21 @@
 import React from "react";
 import "./Login.css";
-import { useHistory, useLocation } from "react-router";
+import { useHistory, useLocation, Link } from "react-router-dom";
 import useAuth from "../../Firebase/Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { signInWithEmailAndPassword } from "@firebase/auth";
-import { Link } from "react-router-dom";
 
 const Login = () => {
     // importing login methods here
-    const { loginUsingGoogle, error, setUser, setError, auth, setIsLoading } = useAuth();
+    const {
+        logInWithGithub,
+        loginUsingGoogle,
+        error,
+        setUser,
+        setError,
+        auth,
+        setIsLoading,
+    } = useAuth();
     // location information
     const location = useLocation();
     const history = useHistory();
@@ -22,13 +29,29 @@ const Login = () => {
                 history.push(redirect_uri);
             })
             .catch((error) => {
-                setError(error);
-            }).finally(()=> setIsLoading(false))
+                setError(error.message);
+                // console.log(error);
+            })
+            .finally(() => setIsLoading(false));
+    };
+    // handle github login
+    const handleLoginUsingGithub = () => {
+        logInWithGithub()
+            .then((result) => {
+                setUser(result.user);
+                // console.log(result.user);
+            })
+            .catch((error) => {
+                setError(error.message);
+                // console.log(error);
+            })
+            .finally(() => setIsLoading(false));
     };
     // email/password login
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         // console.log(data);
+        setIsLoading(true);
         signInWithEmailAndPassword(auth, data.email, data.password)
             .then((result) => {
                 // console.log(result);
@@ -36,15 +59,16 @@ const Login = () => {
                 history.push(redirect_uri);
             })
             .catch((error) => {
-                setError(error);
-            });
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false));
     };
     return (
         <div className="login-page">
             <div className="auth-error">
                 {error && (
                     <div className="alert alert-danger">
-                        <h6>{error}</h6>
+                        <h6> {error} </h6>
                     </div>
                 )}
             </div>
@@ -55,12 +79,16 @@ const Login = () => {
                         <input
                             type="email"
                             placeholder="Email"
-                            {...register("email")}
+                            {...register("email", {
+                                required: true,
+                            })}
                         />
                         <input
                             type="password"
                             placeholder="Password"
-                            {...register("password")}
+                            {...register("password", {
+                                required: true,
+                            })}
                         />
                         <input
                             className="btn login-btn"
@@ -87,7 +115,7 @@ const Login = () => {
                     </button>
                     <button
                         className=" btn-github  shadow"
-                        onClick={handleLoginUsingGoogle}
+                        onClick={handleLoginUsingGithub}
                     >
                         <img src="https://i.ibb.co/G9646vx/git.png" alt="" />
                         Continue with Github

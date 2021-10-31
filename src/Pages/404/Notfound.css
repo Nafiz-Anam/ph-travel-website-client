@@ -26,3 +26,16 @@
     color: white;
     font-weight: 500;
 }
+
+@media (max-width: 575.98px){
+.content-404 h1{
+    font-size: 10em;
+}
+.notfound-input{
+    width: 100%;
+}
+.all-card{
+    margin: 15px;
+}
+}
+

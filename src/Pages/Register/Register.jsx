@@ -2,19 +2,26 @@ import { createUserWithEmailAndPassword, updateProfile } from "@firebase/auth";
 import React from "react";
 import "./Register.css";
 import { useForm } from "react-hook-form";
-import { useHistory, useLocation } from "react-router";
+import { useHistory, useLocation, Link } from "react-router-dom";
 import useAuth from "../../Firebase/Hooks/useAuth";
-import { Link } from "react-router-dom";
 
 const Register = () => {
-    const { loginUsingGoogle, error, auth, setUser, setError } = useAuth();
+    const {
+        loginUsingGoogle,
+        logInWithGithub,
+        error,
+        auth,
+        setUser,
+        setError,
+        setIsLoading,
+    } = useAuth();
     // location information
     const location = useLocation();
     const history = useHistory();
     // redirect url here
     // console.log("Came from ", location.state?.from);
     const redirect_uri = location.state?.from || "/";
-    // google login 
+    // google login
     const handleLoginUsingGoogle = () => {
         loginUsingGoogle()
             .then((result) => {
@@ -22,8 +29,21 @@ const Register = () => {
                 history.push(redirect_uri);
             })
             .catch((error) => {
-                setError(error);
-            });
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false));
+    };
+    // handle github login
+    const handleLoginUsingGithub = () => {
+        logInWithGithub()
+            .then((result) => {
+                setUser(result.user);
+                // console.log(result.user);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false));
     };
     // email/password registration
     const { register, handleSubmit } = useForm();
@@ -35,7 +55,7 @@ const Register = () => {
                 displayName: data.name,
                 photoURL: data.image,
             }).then((res) => {
-                console.log(res);
+                // console.log(res);
             });
         };
         createUserWithEmailAndPassword(auth, data.email, data.password)
@@ -46,7 +66,7 @@ const Register = () => {
                 history.push(redirect_uri);
             })
             .catch((error) => {
-                setError(error);
+                setError(error.message);
             });
     };
 
@@ -112,7 +132,7 @@ const Register = () => {
                     </button>
                     <button
                         className=" btn-github  shadow"
-                        onClick={handleLoginUsingGoogle}
+                        onClick={handleLoginUsingGithub}
                     >
                         <img
                             src="https://i.ibb.co/G9646vx/git.png"

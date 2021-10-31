@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 const Booking = () => {
     // importing login methods here
     const { user, saveDetails } = useAuth();
-    console.log(saveDetails);
+    // console.log(saveDetails);
     const { register, handleSubmit } = useForm();
     const history = useHistory();
     const onSubmit = (data) => {

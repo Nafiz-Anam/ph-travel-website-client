@@ -28,7 +28,7 @@ const Header = () => {
                             aria-label="Toggle navigation"
                         >
                             {/* <span className="navbar-toggler-icon"></span> */}
-                            <i class="fad fa-bars"></i>
+                            <i className="fad fa-bars"></i>
                         </button>
                         <div
                             className="collapse navbar-collapse"
@@ -82,6 +82,16 @@ const Header = () => {
                                 {user?.email &&
                                     user?.email !== "admin@chisfis.com" && (
                                         <li className="nav-item">
+                                            <span className="nav-link">
+                                                <NavLink to="/profile">
+                                                    Profile
+                                                </NavLink>
+                                            </span>
+                                        </li>
+                                    )}
+                                {user?.email &&
+                                    user?.email !== "admin@chisfis.com" && (
+                                        <li className="nav-item">
                                             <span className="nav-link user-name">
                                                 <Link to="/profile">
                                                     {user?.displayName
@@ -91,16 +101,6 @@ const Header = () => {
                                             </span>
                                         </li>
                                     )}
-                                {/* {user?.email &&
-                                    user?.email !== "admin@chisfis.com" && (
-                                        <li className="nav-item">
-                                            <span className="nav-link">
-                                                <NavLink to="/profile">
-                                                    Profile
-                                                </NavLink>
-                                            </span>
-                                        </li>
-                                    )} */}
                                 {user?.email && (
                                     <li className="nav-item">
                                         <button

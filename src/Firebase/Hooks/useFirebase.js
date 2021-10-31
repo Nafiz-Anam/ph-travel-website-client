@@ -4,6 +4,7 @@ import {
     getAuth,
     signInWithPopup,
     GoogleAuthProvider,
+    GithubAuthProvider,
     signOut,
     onAuthStateChanged,
 } from "firebase/auth";
@@ -23,12 +24,20 @@ const useFirebase = () => {
 
     // providers for different login methods
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     // login functions here
     //google login
     const loginUsingGoogle = () => {
         setIsLoading(true);
         return signInWithPopup(auth, googleProvider);
+    };
+
+    // github login 
+    const logInWithGithub = () => {
+        setIsLoading(true);
+        return signInWithPopup(auth, githubProvider)
+            
     };
 
     //observer function here
@@ -66,6 +75,7 @@ const useFirebase = () => {
         saveDetails,
         isLoading,
         setIsLoading,
+        logInWithGithub,
     };
 };
 

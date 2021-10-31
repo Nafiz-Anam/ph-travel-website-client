@@ -13,7 +13,7 @@ const Single = () => {
         fetch(`https://gruesome-beast-12739.herokuapp.com/hotels/${id}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setHotel(data);
             });
     }, []);
@@ -49,9 +49,10 @@ const Single = () => {
                                     </div>
 
                                     <p>
-                                        <i class="fal fa-map-marker-alt"></i>{" "}
+                                        <i className="fal fa-map-marker-alt"></i>{" "}
                                         {hotel?.address}
                                     </p>
+                                    <h3 className='mt-3'> $ {hotel?.price} </h3>
                                 </div>
                             </div>
                             <div className="desc">

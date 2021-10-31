@@ -14,7 +14,7 @@ const Card = (props) => {
                     <p className="bed-count">Entire cabin - {bedcount} beds</p>
                     <h2 className="title">{eventTitle}</h2>
                     <p className="address">
-                        <i class="fal fa-map-marker-alt"></i> {address}
+                        <i className="fal fa-map-marker-alt"></i> {address}
                     </p>
                 </div>
                 <div className="card-footer">
@@ -27,7 +27,7 @@ const Card = (props) => {
                         </div>
                         <div className="col-6 rating-area">
                             <p className="ratings">
-                                <i class="fas fa-star"></i> 4.8{" "}
+                                <i className="fas fa-star"></i> 4.8{" "}
                                 <span>({ratings})</span>
                             </p>
                         </div>
@@ -37,7 +37,7 @@ const Card = (props) => {
                             <button className="btn btn-details">Details</button>
                         </Link>
                         <button className="btn btn-wish">
-                            <i class="far fa-heart"></i>
+                            <i className="far fa-heart"></i>
                         </button>
                     </div>
                 </div>

@@ -90,7 +90,7 @@ const About = () => {
                                         </p>
                                         <h2>Berta Emili</h2>
                                         <h5>
-                                            <i class="fal fa-map-marker-alt"></i>
+                                            <i className="fal fa-map-marker-alt"></i>
                                             Tokyo
                                         </h5>
                                     </div>
@@ -104,7 +104,7 @@ const About = () => {
                                         </p>
                                         <h2>Berta Emili</h2>
                                         <h5>
-                                            <i class="fal fa-map-marker-alt"></i>
+                                            <i className="fal fa-map-marker-alt"></i>
                                             Tokyo
                                         </h5>
                                     </div>
@@ -118,7 +118,7 @@ const About = () => {
                                         </p>
                                         <h2>Berta Emili</h2>
                                         <h5>
-                                            <i class="fal fa-map-marker-alt"></i>
+                                            <i className="fal fa-map-marker-alt"></i>
                                             Tokyo
                                         </h5>
                                     </div>
@@ -135,7 +135,7 @@ const About = () => {
                                     aria-hidden="true"
                                 ></span> */}
                                 <span>
-                                    <i class="fas fa-chevron-left"></i>
+                                    <i className="fas fa-chevron-left"></i>
                                 </span>
                                 <span className="visually-hidden">
                                     Previous
@@ -152,7 +152,7 @@ const About = () => {
                                     aria-hidden="true"
                                 ></span> */}
                                 <span>
-                                    <i class="fas fa-chevron-right"></i>
+                                    <i className="fas fa-chevron-right"></i>
                                 </span>
                                 <span className="visually-hidden">Next</span>
                             </button>
@@ -176,7 +176,7 @@ const About = () => {
                                 placeholder="Enter your email"
                             />
                             <button className="btn btn-subs">
-                                <i class="fad fa-arrow-right"></i>
+                                <i className="fad fa-arrow-right"></i>
                             </button>
                         </form>
                     </div>

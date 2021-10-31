@@ -210,7 +210,7 @@ const Home = () => {
                                 placeholder="Enter your email"
                             />
                             <button className="btn btn-subs">
-                                <i class="fad fa-arrow-right"></i>
+                                <i className="fad fa-arrow-right"></i>
                             </button>
                         </form>
                     </div>

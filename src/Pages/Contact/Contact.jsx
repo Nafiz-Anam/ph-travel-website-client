@@ -1,5 +1,5 @@
 import React from "react";
-import './Contact.css'
+import "./Contact.css";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
@@ -21,13 +21,13 @@ const Contact = () => {
                         <div className="social-links">
                             <ul>
                                 <li>
-                                    <i class="fab fa-facebook-f"></i>
+                                    <i className="fab fa-facebook-f"></i>
                                 </li>
                                 <li>
-                                    <i class="fab fa-twitter"></i>
+                                    <i className="fab fa-twitter"></i>
                                 </li>
                                 <li>
-                                    <i class="fab fa-instagram"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </li>
                             </ul>
                         </div>
@@ -66,7 +66,7 @@ const Contact = () => {
                                 placeholder="Enter your email"
                             />
                             <button className="btn btn-subs">
-                                <i class="fad fa-arrow-right"></i>
+                                <i className="fad fa-arrow-right"></i>
                             </button>
                         </form>
                     </div>
