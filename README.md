@@ -4,14 +4,6 @@
 
 Live website link here : [Live link](https://chis-fis.web.app/)
 
-## Website Desktop View Screenshot
-
-![Website Screenshot](desktopView.png)
-
-## Website Mobile View Screenshot
-
-Mobile View Screenshot here : [Live link](https://i.ibb.co/NjnSyXm/screencapture-chis-fis-web-app-2021-10-31-14-56-09.png)
-
 ## Features
 
 ### Want to Check the site as an Admin?
@@ -24,6 +16,14 @@ Mobile View Screenshot here : [Live link](https://i.ibb.co/NjnSyXm/screencapture
 -   `Manage ALl the Bookings`
 -   `Add new Listings`
 -   `Manage All the Listings`
+
+## Website Desktop View Screenshot
+
+![Website Screenshot](desktopView.png)
+
+## Website Mobile View Screenshot
+
+Mobile View Screenshot here : [Live link](https://i.ibb.co/NjnSyXm/screencapture-chis-fis-web-app-2021-10-31-14-56-09.png)
 
 ### What is Chis-fis Travel ?
 
