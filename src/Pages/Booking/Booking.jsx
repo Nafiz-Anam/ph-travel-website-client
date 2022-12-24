@@ -12,7 +12,7 @@ const Booking = () => {
     const history = useHistory();
     const onSubmit = (data) => {
         // console.log(data);
-        fetch("https://gruesome-beast-12739.herokuapp.com/booking", {
+        fetch("https://chis-fis-server.onrender.com/booking", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

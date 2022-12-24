@@ -7,7 +7,7 @@ const Admin = () => {
     const [allBookings, setAllBookings] = useState([]);
     const onSubmit = (data) => {
         console.log(data);
-        fetch("https://gruesome-beast-12739.herokuapp.com/hotels", {
+        fetch("https://chis-fis-server.onrender.com/hotels", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -26,7 +26,7 @@ const Admin = () => {
     // fetching data  here
     // const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("https://gruesome-beast-12739.herokuapp.com/booking")
+        fetch("https://chis-fis-server.onrender.com/booking")
             .then((res) => res.json())
             .then((data) => {
                 setAllBookings(data);
@@ -37,7 +37,7 @@ const Admin = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
+            fetch(`https://chis-fis-server.onrender.com/booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -56,7 +56,7 @@ const Admin = () => {
     const [hotel, setHotel] = useState({});
     // update status
     const handleStatus = (id) => {
-        fetch(`https://gruesome-beast-12739.herokuapp.com/hotels/${id}`)
+        fetch(`https://chis-fis-server.onrender.com/hotels/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -65,7 +65,7 @@ const Admin = () => {
         const updatedStatus = { ...hotel };
         updatedStatus.status = "Approve";
         setHotel(updatedStatus);
-        fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
+        fetch(`https://chis-fis-server.onrender.com/booking/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -76,7 +76,7 @@ const Admin = () => {
             .then((data) => {
                 if (data.modifiedCount > 0) {
                     alert("Approved Successfully.");
-                    fetch("https://gruesome-beast-12739.herokuapp.com/booking")
+                    fetch("https://chis-fis-server.onrender.com/booking")
                         .then((res) => res.json())
                         .then((data) => {
                             setAllBookings(data);

@@ -8,7 +8,7 @@ const Profile = () => {
     // fetching specific data  here
     const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("https://gruesome-beast-12739.herokuapp.com/booking")
+        fetch("https://chis-fis-server.onrender.com/booking")
             .then((res) => res.json())
             .then((data) => {
                 const specificBooking = data.filter(
@@ -22,7 +22,7 @@ const Profile = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://gruesome-beast-12739.herokuapp.com/booking/${id}`, {
+            fetch(`https://chis-fis-server.onrender.com/booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

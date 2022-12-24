@@ -10,7 +10,7 @@ const Single = () => {
     const { setSaveDetails } = useAuth();
 
     useEffect(() => {
-        fetch(`https://gruesome-beast-12739.herokuapp.com/hotels/${id}`)
+        fetch(`https://chis-fis-server.onrender.com/hotels/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -52,7 +52,7 @@ const Single = () => {
                                         <i className="fal fa-map-marker-alt"></i>{" "}
                                         {hotel?.address}
                                     </p>
-                                    <h3 className='mt-3'> $ {hotel?.price} </h3>
+                                    <h3 className="mt-3"> $ {hotel?.price} </h3>
                                 </div>
                             </div>
                             <div className="desc">
